@@ -1,0 +1,77 @@
+import java.util.Scanner;
+
+public class Tree {
+    public static void main(String[] args) {
+        // Initialize scanner for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user for their name
+        System.out.println("Hello! What's your name?");
+        String name = scanner.nextLine();
+        System.out.println("Hello, " + name + "! I'm going to plant a tree today.");
+
+        // Prompt user to choose tree type
+        System.out.println("Which type of tree would you like to plant?");
+        System.out.println("1. Pine Tree");
+        System.out.println("2. Oak Tree");
+        System.out.println("3. Palm Tree");
+        int choice = scanner.nextInt();
+
+        // Plant the selected type of tree
+        switch (choice) {
+            case 1:
+                plantPineTree();
+                break;
+            case 2:
+                plantOakTree();
+                break;
+            case 3:
+                plantPalmTree();
+                break;
+            default:
+                // If invalid choice, plant default tree
+                System.out.println("Invalid choice. Planting a default tree.");
+                plantDefaultTree();
+                break;
+        }
+
+        // Close scanner to avoid resource leak
+        scanner.close();
+    }
+
+    // Method to plant a Pine Tree
+    private static void plantPineTree() {
+        System.out.println("  *  ");
+        System.out.println(" *** ");
+        System.out.println(" *** ");
+        System.out.println("  *  ");
+        System.out.println("  *  ");
+    }
+
+    // Method to plant an Oak Tree
+    private static void plantOakTree() {
+        System.out.println("  @  ");
+        System.out.println(" @@@ ");
+        System.out.println("@@@@@");
+        System.out.println("  |  ");
+        System.out.println("  |  ");
+    }
+
+    // Method to plant a Palm Tree
+    private static void plantPalmTree() {
+        System.out.println("  |  ");
+        System.out.println(" \\|/ ");
+        System.out.println("  |  ");
+        System.out.println(" \\|/ ");
+        System.out.println(" /|\\ ");
+    }
+
+    // Method to plant a Default Tree
+    private static void plantDefaultTree() {
+        System.out.println("  *  ");
+        System.out.println(" *** ");
+        System.out.println(" *** ");
+        System.out.println("  *  ");
+        System.out.println("  *  ");
+    }
+}
